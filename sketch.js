@@ -2,7 +2,7 @@ var path,boy,cash,diamonds,jwellery,sword;
 var pathImg,boyImg,cashImg,diamondsImg,jwelleryImg,swordImg;
 var treasureCollection = 0;
 var cashG,diamondsG,jwelleryG,swordGroup;
-var gameOver 
+
 //Game States
 var PLAY=1;
 var END=0;
@@ -22,7 +22,8 @@ function preload(){
 function setup(){
   
   createCanvas(400,600);
-// Moving background 
+// Moving background
+  
 path=createSprite(200,200);
 path.addImage(pathImg);
 path.velocityY = 4;
@@ -87,12 +88,18 @@ function draw() {
         jwelleryG.setVelocityYEach(0);
         swordGroup.setVelocityYEach(0);
 //create a sprite
-gameOverS = createSprite(150,250,50,10);
+
+gameOverS = createSprite(150,250,50,10)
+
 //add a animation for gameover
+
 gameOverS.addAnimation("game end",gameOver)
+
 //scale the gameover image
-gameOverS.scale=0.5
-boy.destroy();
+ gameOverS.scale=0.5
+ boy.destroy()
+ }
+
        
      
     }
@@ -104,7 +111,7 @@ boy.destroy();
   text("Treasure: "+ treasureCollection,10,30);
   }
 
-}
+
 
 function createCash() {
   if (World.frameCount % 200 == 0) {
